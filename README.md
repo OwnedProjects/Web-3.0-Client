@@ -1,8 +1,18 @@
-# Getting Started with Create React App
+# KnowledgeKeen - React application to Connect and Transact with Test Ethereum via MetaMask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Started this project as a learning and understanding of React and Solidity. Slowly and steadily enhanced this from a simple POC to a full-fledged application that can take any kind of Crypto as input and can be sent over a network for some gas fee.
 
-## Available Scripts
+## Network Switching
+
+This was initially tested on the Ropsten network but as recently Ropsten was completely depreciated (you can still do the transactions, but cannot fetch the details). Hence, as a result, moved this application from the Ropsten test network to the Goerli test network with only a few modifications.
+
+As of now, the application is much more customizable, and using only a few tweaks you can move from the Goerli test network to any other test network with ease.
+
+## Technologies To Know
+
+This project was packaged using `create-react-app` so no other addition library was required.
+
+## Commands you need to know
 
 In the project directory, you can run:
 
@@ -39,32 +49,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Things to `Note`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+There are a couple of files missing in this project due to security configuration.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Create an .env file and add the key `REACT_APP_CONTRACT_ADDRESS`. The value for this key would be the transaction deployed address. Transaction deployed address is basically whenever you deploy the smart contract an unique id is generated which we use as a **Contract Address**.
+2. Second file is `Transactions.json` located under `src/utils/`. This .json file is readily available under your server files `Smart_Contracts/artifacts/contracts/Transaction.sol/Transaction.json`, and you just need to copy paste this file from your server to client.
