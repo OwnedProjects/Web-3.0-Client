@@ -55,3 +55,5 @@ There are a couple of files missing in this project due to security configuratio
 
 1. Create an .env file and add the key `REACT_APP_CONTRACT_ADDRESS`. The value for this key would be the transaction deployed address. Transaction deployed address is basically whenever you deploy the smart contract an unique id is generated which we use as a **Contract Address**.
 2. Second file is `Transactions.json` located under `src/utils/`. This .json file is readily available under your server files `Smart_Contracts/artifacts/contracts/Transaction.sol/Transaction.json`, and you just need to copy paste this file from your server to client.
+
+Happy Learning!!!
